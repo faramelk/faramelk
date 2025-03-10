@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="فراملک - مشاور املاک آنلاین | خرید، فروش و اجاره ملک در سراسر ایران">
+    <meta name="keywords" content="املاک, خرید خانه, فروش خانه, اجاره خانه, مشاور املاک, فراملک">
+    <title>فراملک | مشاور املاک آنلاین</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="لوگوی سایت" onerror="this.src='https://via.placeholder.com/150x50?text=فراملک'">
+                <h1>فراملک</h1>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">صفحه اصلی</a></li>
+                <li><a href="#properties">املاک</a></li>
+                <li><a href="#services">خدمات</a></li>
+                <li><a href="#about">درباره ما</a></li>
+                <li><a href="#contact" class="contact-btn">تماس با ما</a></li>
+                <li><a href="#login" class="login-btn">ورود/ثبت‌نام</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>فراملک، همراه شما در معاملات املاک</h1>
+                <p>خرید، فروش و اجاره ملک با اطمینان خاطر</p>
+                <div class="search-box">
+                    <div class="search-tabs">
+                        <button class="tab-btn active" data-tab="buy">خرید</button>
+                        <button class="tab-btn" data-tab="rent">اجاره</button>
+                        <button class="tab-btn" data-tab="mortgage">رهن کامل</button>
+                    </div>
+                    <div class="search-content">
+                        <div class="search-row">
+                            <div class="search-group">
+                                <label>منطقه یا محله</label>
+                                <input type="text" placeholder="نام منطقه یا محله را وارد کنید">
+                            </div>
+                            <div class="search-group">
+                                <label>نوع ملک</label>
+                                <select>
+                                    <option value="">همه</option>
+                                    <option value="apartment">آپارتمان</option>
+                                    <option value="villa">ویلا</option>
+                                    <option value="office">دفتر کار</option>
+                                    <option value="store">مغازه</option>
+                                    <option value="land">زمین</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search-row">
+                            <div class="search-group">
+                                <label>محدوده قیمت (تومان)</label>
+                                <div class="price-range">
+                                    <input type="number" placeholder="حداقل">
+                                    <span>تا</span>
+                                    <input type="number" placeholder="حداکثر">
+                                </div>
+                            </div>
+                            <div class="search-group">
+                                <label>متراژ (متر)</label>
+                                <div class="area-range">
+                                    <input type="number" placeholder="حداقل">
+                                    <span>تا</span>
+                                    <input type="number" placeholder="حداکثر">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-row">
+                            <div class="search-group">
+                                <label>تعداد خواب</label>
+                                <div class="room-options">
+                                    <label class="room-option">
+                                        <input type="checkbox" value="1">
+                                        ۱ خواب
+                                    </label>
+                                    <label class="room-option">
+                                        <input type="checkbox" value="2">
+                                        ۲ خواب
+                                    </label>
+                                    <label class="room-option">
+                                        <input type="checkbox" value="3">
+                                        ۳ خواب
+                                    </label>
+                                    <label class="room-option">
+                                        <input type="checkbox" value="4+">
+                                        ۴ خواب و بیشتر
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="search-group">
+                                <label>امکانات</label>
+                                <div class="amenities-options">
+                                    <label class="amenity-option">
+                                        <input type="checkbox" value="parking">
+                                        پارکینگ
+                                    </label>
+                                    <label class="amenity-option">
+                                        <input type="checkbox" value="elevator">
+                                        آسانسور
+                                    </label>
+                                    <label class="amenity-option">
+                                        <input type="checkbox" value="storage">
+                                        انباری
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-row">
+                            <div class="search-group full-width">
+                                <label>سن بنا</label>
+                                <div class="age-options">
+                                    <label class="age-option">
+                                        <input type="radio" name="age" value="new">
+                                        نوساز
+                                    </label>
+                                    <label class="age-option">
+                                        <input type="radio" name="age" value="1-5">
+                                        ۱ تا ۵ سال
+                                    </label>
+                                    <label class="age-option">
+                                        <input type="radio" name="age" value="5-10">
+                                        ۵ تا ۱۰ سال
+                                    </label>
+                                    <label class="age-option">
+                                        <input type="radio" name="age" value="10+">
+                                        بیش از ۱۰ سال
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-actions">
+                            <button class="search-btn">
+                                <i class="fas fa-search"></i>
+                                جستجوی پیشرفته
+                            </button>
+                            <button class="reset-btn">
+                                <i class="fas fa-redo"></i>
+                                پاک کردن فیلترها
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="properties" class="properties">
+            <h2>املاک ویژه</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">همه</button>
+                <button class="filter-btn" data-filter="sale">فروشی</button>
+                <button class="filter-btn" data-filter="rent">اجاره‌ای</button>
+                <button class="filter-btn" data-filter="mortgage">رهن کامل</button>
+            </div>
+            <div class="property-grid">
+                <div class="property-card" data-type="sale">
+                    <div class="property-image">
+                        <div class="gallery-container">
+                            <a href="assets/images/property1.jpg" data-fancybox="gallery1" data-caption="نمای اصلی">
+                                <img src="assets/images/property1.jpg" alt="ملک ۱" onerror="this.src='https://via.placeholder.com/400x300?text=تصویر+ملک'">
+                            </a>
+                            <a href="assets/images/property1-2.jpg" data-fancybox="gallery1" data-caption="آشپزخانه"></a>
+                            <a href="assets/images/property1-3.jpg" data-fancybox="gallery1" data-caption="اتاق خواب"></a>
+                        </div>
+                        <span class="price">۲,۵۰۰,۰۰۰,۰۰۰ تومان</span>
+                        <div class="property-badges">
+                            <span class="badge">فروشی</span>
+                            <span class="badge">ویژه</span>
+                        </div>
+                        <button class="gallery-btn"><i class="fas fa-images"></i> گالری تصاویر</button>
+                    </div>
+                    <div class="property-info">
+                        <h3>آپارتمان لوکس در سعادت‌آباد</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> تهران، سعادت‌آباد</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> ۳ خواب</span>
+                            <span><i class="fas fa-ruler-combined"></i> ۱۲۰ متر</span>
+                            <span><i class="fas fa-parking"></i> پارکینگ</span>
+                            <span><i class="fas fa-calendar"></i> سال ساخت: ۱۴۰۱</span>
+                        </div>
+                        <div class="property-description">
+                            <p>این واحد دارای موقعیت عالی، نورگیر، پارکینگ اختصاصی و انباری می‌باشد.</p>
+                        </div>
+                        <div class="property-map">
+                            <div id="map1" class="map"></div>
+                        </div>
+                        <div class="property-actions">
+                            <button class="action-btn" onclick="showContactInfo('۰۹۱۲۱۲۳۴۵۶۷')"><i class="fas fa-phone"></i> تماس</button>
+                            <button class="action-btn" onclick="toggleFavorite(this)"><i class="fas fa-heart"></i> علاقه‌مندی</button>
+                            <button class="action-btn" onclick="shareProperty()"><i class="fas fa-share"></i> اشتراک‌گذاری</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="sale">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3" alt="ملک ۲">
+                        <span class="price">۳,۲۰۰,۰۰۰,۰۰۰ تومان</span>
+                        <div class="property-badges">
+                            <span class="badge">فروشی</span>
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <h3>ویلا دوبلکس در لواسان</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> تهران، لواسان</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> ۴ خواب</span>
+                            <span><i class="fas fa-ruler-combined"></i> ۲۵۰ متر</span>
+                            <span><i class="fas fa-swimming-pool"></i> استخر</span>
+                        </div>
+                        <div class="property-actions">
+                            <button class="action-btn"><i class="fas fa-phone"></i> تماس</button>
+                            <button class="action-btn"><i class="fas fa-heart"></i> علاقه‌مندی</button>
+                            <button class="action-btn"><i class="fas fa-share"></i> اشتراک‌گذاری</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="rent">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3" alt="ملک ۳">
+                        <span class="price">۱,۸۰۰,۰۰۰,۰۰۰ تومان</span>
+                        <div class="property-badges">
+                            <span class="badge">اجاره</span>
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <h3>واحد اداری در ونک</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> تهران، ونک</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-ruler-combined"></i> ۸۰ متر</span>
+                            <span><i class="fas fa-building"></i> طبقه ۴</span>
+                            <span><i class="fas fa-parking"></i> پارکینگ</span>
+                        </div>
+                        <div class="property-actions">
+                            <button class="action-btn"><i class="fas fa-phone"></i> تماس</button>
+                            <button class="action-btn"><i class="fas fa-heart"></i> علاقه‌مندی</button>
+                            <button class="action-btn"><i class="fas fa-share"></i> اشتراک‌گذاری</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <h2>خدمات ما</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>خرید و فروش</h3>
+                    <p>مشاوره تخصصی در خرید و فروش انواع املاک مسکونی و تجاری</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-key"></i>
+                    <h3>رهن و اجاره</h3>
+                    <p>خدمات رهن و اجاره با شرایط منعطف و قراردادهای معتبر</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>مشاوره حقوقی</h3>
+                    <p>ارائه مشاوره حقوقی در زمینه معاملات املاک</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>درباره فراملک</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>فراملک با بیش از ۱۰ سال سابقه درخشان در زمینه معاملات املاک، همواره در تلاش است تا بهترین خدمات را به مشتریان خود ارائه دهد.</p>
+                    <ul class="achievements">
+                        <li><i class="fas fa-check"></i> بیش از ۱۰۰۰ معامله موفق</li>
+                        <li><i class="fas fa-check"></i> مشاوران متخصص و حرفه‌ای</li>
+                        <li><i class="fas fa-check"></i> پشتیبانی ۲۴ ساعته</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>تماس با ما</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p><a href="tel:02191234567">۰۲۱-۹۱۲۳۴۵۶۷</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:info@faramelk.ir">info@faramelk.ir</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>تهران، خیابان ولیعصر، بالاتر از میدان ونک، پلاک ۱۲۳</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <p><a href="https://wa.me/989123456789" target="_blank">۰۹۱۲۳۴۵۶۷۸۹</a></p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" onsubmit="return validateForm(event)">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="نام و نام خانوادگی" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="ایمیل" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="شماره تماس" pattern="[0-9]{11}" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="پیام شما" required></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">ارسال پیام</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ساعات کاری</h3>
+                <p>شنبه تا پنجشنبه: ۹ صبح تا ۸ شب</p>
+                <p>جمعه: ۱۰ صبح تا ۲ بعد از ظهر</p>
+            </div>
+            <div class="footer-section">
+                <h3>شبکه‌های اجتماعی</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>تمامی حقوق محفوظ است © ۱۴۰۲ فراملک</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        // اعتبارسنجی فرم
+        document.addEventListener('DOMContentLoaded', function() {
+            // منوی همبرگر
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+
+                // بستن منو با کلیک روی لینک‌ها
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+
+            // فیلتر املاک
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            if (filterButtons.length > 0) {
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const filter = button.dataset.filter;
+                        
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        document.querySelectorAll('.property-card').forEach(card => {
+                            if (filter === 'all' || card.dataset.type === filter) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            }
+
+            // گالری تصاویر
+            if (typeof Fancybox !== 'undefined') {
+                Fancybox.bind("[data-fancybox]", {
+                    loop: true,
+                    buttons: ["zoom", "slideShow", "fullScreen", "close"],
+                    animationEffect: "fade"
+                });
+            }
+
+            // اعتبارسنجی فرم تماس
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', validateForm);
+            }
+        });
+
+        function validateForm(event) {
+            event.preventDefault();
+            let isValid = true;
+            
+            const fields = {
+                name: { min: 3, message: 'نام باید حداقل ۳ حرف باشد' },
+                email: { regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'لطفا یک ایمیل معتبر وارد کنید' },
+                phone: { regex: /^[0-9]{11}$/, message: 'شماره تماس باید ۱۱ رقم باشد' },
+                message: { min: 10, message: 'پیام باید حداقل ۱۰ حرف باشد' }
+            };
+
+            for (const [id, rules] of Object.entries(fields)) {
+                const input = document.getElementById(id);
+                if (!input) continue;
+
+                let fieldValid = true;
+                if (rules.min && input.value.length < rules.min) fieldValid = false;
+                if (rules.regex && !rules.regex.test(input.value)) fieldValid = false;
+
+                if (!fieldValid) {
+                    showError(input, rules.message);
+                    isValid = false;
+                } else {
+                    clearError(input);
+                }
+            }
+
+            if (isValid) {
+                alert('پیام شما با موفقیت ارسال شد');
+                event.target.reset();
+            }
+
+            return false;
+        }
+
+        function showError(input, message) {
+            const formGroup = input.parentElement;
+            const errorMessage = formGroup.querySelector('.error-message');
+            if (errorMessage) {
+                errorMessage.textContent = message;
+                formGroup.classList.add('error');
+            }
+        }
+
+        function clearError(input) {
+            const formGroup = input.parentElement;
+            const errorMessage = formGroup.querySelector('.error-message');
+            if (errorMessage) {
+                errorMessage.textContent = '';
+                formGroup.classList.remove('error');
+            }
+        }
+
+        // نمایش اطلاعات تماس
+        function showContactInfo(phone) {
+            alert(`شماره تماس: ${phone}`);
+        }
+
+        // علاقه‌مندی‌ها
+        function toggleFavorite(button) {
+            if (button) {
+                button.classList.toggle('favorite');
+                const icon = button.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fas');
+                    icon.classList.toggle('far');
+                }
+            }
+        }
+
+        // اشتراک‌گذاری
+        function shareProperty() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'ملک در فراملک',
+                    text: 'مشاهده این ملک در فراملک',
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                const dummy = document.createElement('textarea');
+                dummy.value = window.location.href;
+                document.body.appendChild(dummy);
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+                alert('لینک ملک کپی شد');
+            }
+        }
+    </script>
+</body>
+</html> 

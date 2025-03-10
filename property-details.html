@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جزئیات ملک | فراملک</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+</head>
+<body>
+    <!-- هدر مشابه صفحه اصلی -->
+    <header>...</header>
+
+    <main class="property-details">
+        <div class="property-header">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="index.html">صفحه اصلی</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <a href="#properties">املاک</a>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>آپارتمان لوکس در سعادت‌آباد</span>
+                </nav>
+                <div class="header-content">
+                    <div class="title-section">
+                        <h1>آپارتمان لوکس در سعادت‌آباد</h1>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> تهران، سعادت‌آباد</p>
+                        <div class="price-tag">۲,۵۰۰,۰۰۰,۰۰۰ تومان</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="primary-btn"><i class="fas fa-phone"></i> تماس با مشاور</button>
+                        <button class="outline-btn add-compare" onclick="addToCompare(1)">
+                            <i class="fas fa-exchange-alt"></i> افزودن به مقایسه
+                        </button>
+                        <button class="outline-btn share-btn" onclick="shareProperty()">
+                            <i class="fas fa-share"></i> اشتراک‌گذاری
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="property-content">
+                <div class="gallery-section">
+                    <div class="main-image">
+                        <a href="https://images.unsplash.com/photo-1560518883-ce09059eeffa" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" alt="نمای اصلی">
+                        </a>
+                    </div>
+                    <div class="thumbnail-grid">
+                        <a href="https://images.unsplash.com/photo-1" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1" alt="تصویر ۱">
+                        </a>
+                        <!-- تصاویر بیشتر -->
+                    </div>
+                </div>
+
+                <div class="details-grid">
+                    <div class="main-details">
+                        <div class="features-card">
+                            <h3>مشخصات کلی</h3>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <i class="fas fa-ruler-combined"></i>
+                                    <span>متراژ</span>
+                                    <strong>۱۲۰ متر</strong>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-bed"></i>
+                                    <span>خواب</span>
+                                    <strong>۳</strong>
+                                </div>
+                                <!-- موارد بیشتر -->
+                            </div>
+                        </div>
+
+                        <div class="description-card">
+                            <h3>توضیحات</h3>
+                            <div class="description-content">
+                                <p>این واحد آپارتمانی لوکس در یکی از بهترین مناطق سعادت‌آباد واقع شده است. با امکانات کامل و دسترسی عالی به مراکز خرید و حمل و نقل عمومی.</p>
+                                <ul class="amenities-list">
+                                    <li><i class="fas fa-check"></i> پارکینگ اختصاصی</li>
+                                    <li><i class="fas fa-check"></i> انباری</li>
+                                    <li><i class="fas fa-check"></i> آسانسور</li>
+                                    <!-- موارد بیشتر -->
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="map-card">
+                            <h3>موقعیت مکانی</h3>
+                            <div id="propertyMap" class="property-map"></div>
+                        </div>
+                    </div>
+
+                    <aside class="sidebar">
+                        <div class="agent-card">
+                            <div class="agent-info">
+                                <img src="https://via.placeholder.com/100" alt="مشاور املاک">
+                                <div class="agent-details">
+                                    <h4>علی محمدی</h4>
+                                    <p>مشاور املاک فراملک</p>
+                                </div>
+                            </div>
+                            <div class="contact-buttons">
+                                <a href="tel:09121234567" class="primary-btn">
+                                    <i class="fas fa-phone"></i> تماس مستقیم
+                                </a>
+                                <a href="https://wa.me/989121234567" class="whatsapp-btn">
+                                    <i class="fab fa-whatsapp"></i> واتس‌اپ
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mortgage-calculator">
+                            <h3>محاسبه اقساط</h3>
+                            <form id="mortgageForm">
+                                <div class="form-group">
+                                    <label>مبلغ وام (تومان)</label>
+                                    <input type="number" id="loanAmount">
+                                </div>
+                                <div class="form-group">
+                                    <label>مدت بازپرداخت (ماه)</label>
+                                    <input type="number" id="loanTerm">
+                                </div>
+                                <div class="form-group">
+                                    <label>نرخ سود سالیانه (%)</label>
+                                    <input type="number" id="interestRate">
+                                </div>
+                                <button type="button" onclick="calculateMortgage()" class="primary-btn">
+                                    محاسبه
+                                </button>
+                                <div id="mortgageResult" class="result-box"></div>
+                            </form>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- فوتر مشابه صفحه اصلی -->
+    <footer>...</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="details.js"></script>
+</body>
+</html> 

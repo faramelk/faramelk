@@ -1,0 +1,1862 @@
+/* تنظیمات پایه */
+:root {
+    /* رنگ‌های اصلی */
+    --primary-color: #000000;
+    --secondary-color: #333333;
+    --accent-color: #666666;
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --white: #ffffff;
+    
+    /* رنگ‌های وضعیت */
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    
+    /* رنگ‌های حالت تاریک */
+    --dark-bg: #000000;
+    --dark-surface: #1a1a1a;
+    
+    /* سایه‌ها */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+    /* فاصله‌گذاری */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    /* گرد گوشه‌ها */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-full: 9999px;
+    
+    /* اندازه فونت */
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.5rem;
+    --font-3xl: 2rem;
+    
+    /* وزن فونت */
+    --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    
+    /* انیمیشن */
+    --transition-fast: 0.2s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+    
+    /* لایه‌بندی */
+    --z-negative: -1;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+    
+    /* اندازه‌های کانتینر */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1200px;
+    
+    /* تنظیمات هدر */
+    --header-height: 70px;
+    --header-bg: var(--white);
+    --header-color: var(--text-color);
+    
+    /* تنظیمات دکمه‌ها */
+    --btn-padding-y: 0.7rem;
+    --btn-padding-x: 1.5rem;
+    --btn-radius: var(--radius-md);
+    --btn-font-weight: var(--font-medium);
+    
+    /* تنظیمات کارت‌ها */
+    --card-padding: var(--spacing-lg);
+    --card-radius: var(--radius-md);
+    --card-shadow: var(--shadow-md);
+    --card-bg: var(--white);
+    
+    /* تنظیمات فرم‌ها */
+    --input-padding: 0.75rem;
+    --input-radius: var(--radius-sm);
+    --input-border: 1px solid var(--border-color);
+    --input-focus-ring: 0 0 0 2px rgba(0, 0, 0, 0.1);
+
+    /* اضافه کردن متغیرهای جدید */
+    --admin-sidebar-width: 280px;
+    --admin-header-height: 70px;
+    --admin-menu-item-height: 50px;
+    --admin-card-min-width: 240px;
+    --admin-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* رنگ‌های جدید */
+    --admin-primary: var(--primary-color);
+    --admin-secondary: var(--secondary-color);
+    --admin-bg: #f5f5f5;
+    --admin-surface: var(--white);
+    --admin-border: #e0e0e0;
+    --admin-hover: rgba(0, 0, 0, 0.05);
+    --admin-active: rgba(0, 0, 0, 0.1);
+
+    /* متغیرهای امنیتی */
+    --secure-token: none;  /* توکن‌ها رو هرگز در CSS ذخیره نکنید */
+    --api-endpoints: none; /* آدرس‌های API رو در CSS ذخیره نکنید */
+}
+
+/* تنظیمات تم تاریک */
+.dark-theme {
+    --text-color: #ffffff;
+    --bg-color: var(--dark-bg);
+    --border-color: #404040;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --light-gray: var(--dark-surface);
+    --text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    --accent-color: #a0a0a0;
+    color-scheme: dark;
+
+    /* رنگ‌های جدید */
+    --admin-bg: #121212;
+    --admin-surface: #1e1e1e;
+    --admin-border: #333333;
+    --admin-hover: rgba(255, 255, 255, 0.05);
+    --admin-active: rgba(255, 255, 255, 0.1);
+}
+
+/* تنظیمات عمومی */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+body {
+    direction: rtl;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+/* تایپوگرافی */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: darken(var(--primary-color), 10%);
+}
+
+/* فرم‌ها */
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+/* کلاس‌های کمکی */
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+}
+
+/* انیمیشن‌ها */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* اسکرول‌بار سفارشی */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken(var(--primary-color), 10%);
+}
+
+/* هدر و ناوبری */
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* تنظیمات لوگو */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    max-height: 50px;
+    width: auto;
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.contact-btn {
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+/* منوی همبرگر */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* قسمت هیرو */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 60px;
+    position: relative;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.hero-btn {
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-shadow: none;
+}
+
+.hero-btn.primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+}
+
+.hero-btn.secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* حذف جستجوی پیشرفته از صفحه اصلی */
+.search-box {
+    display: none;
+}
+
+/* بخش املاک */
+.properties {
+    padding: 6rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.properties h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.property-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    border: 1px solid var(--border-color);
+}
+
+.property-image {
+    position: relative;
+    height: 200px;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.price {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.property-info {
+    padding: 1.5rem;
+}
+
+.property-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.property-features {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    color: #666;
+}
+
+/* بخش خدمات */
+.services {
+    background-color: var(--light-gray);
+    padding: 6rem 5%;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    border-color: var(--primary-color);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* بخش درباره ما */
+.about {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievements {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.achievements li {
+    margin: 0.5rem 0;
+}
+
+.achievements i {
+    color: var(--secondary-color);
+    margin-left: 0.5rem;
+}
+
+/* بخش تماس */
+.contact {
+    padding: 6rem 5%;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: var(--primary-color);
+}
+
+.info-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-item a:hover {
+    color: var(--primary-color);
+}
+
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Vazirmatn';
+    transition: all 0.3s;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    border-color: #e74c3c;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* فوتر */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 4rem 5% 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+/* بج‌های ملک */
+.property-badges {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.badge {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* دکمه‌های عملیات */
+.property-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.action-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* بهبود ریسپانسیو */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        padding: 80px 2rem 2rem;
+        transition: 0.4s;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .property-actions {
+        flex-direction: column;
+    }
+
+    .action-btn {
+        width: 100%;
+    }
+
+    .property-features {
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .search-row {
+        flex-direction: column;
+    }
+
+    .search-row input,
+    .search-row select {
+        width: 100%;
+    }
+
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info-item i {
+        margin: 0 0 0.5rem 0;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* انیمیشن‌ها */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.property-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* استایل‌های جدید برای دکمه ورود */
+.login-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* انیمیشن‌های جدید */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search-box {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* اصلاح استایل‌های موجود */
+.property-card {
+    border: 1px solid var(--border-color);
+}
+
+.service-card {
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.social-links a {
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+/* فیلترهای املاک */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Vazirmatn';
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* گالری تصاویر */
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-btn {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Vazirmatn';
+    transition: all 0.3s;
+}
+
+.gallery-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* نقشه */
+.property-map {
+    margin-top: 1rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.map {
+    height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* توضیحات ملک */
+.property-description {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+/* بهبود دکمه‌های عملیات */
+.action-btn.favorite {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* انیمیشن‌های جدید */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.property-card:hover {
+    animation: pulse 1s infinite;
+}
+
+/* بهبود ریسپانسیو */
+@media (max-width: 768px) {
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        width: calc(50% - 0.5rem);
+    }
+
+    .property-map {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        border-radius: 0;
+    }
+}
+
+/* بهبود خوانایی */
+.property-features {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.property-features span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* اضافه کردن tooltips */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+[data-tooltip]:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* فیلترهای جستجوی پیشرفته */
+.search-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    font-family: 'Vazirmatn';
+    position: relative;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.search-group {
+    flex: 1;
+}
+
+.search-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.price-range,
+.area-range {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.price-range input,
+.area-range input {
+    flex: 1;
+}
+
+.room-options,
+.amenities-options,
+.age-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.room-option,
+.amenity-option,
+.age-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.search-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.reset-btn {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.reset-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    .search-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .price-range,
+    .area-range {
+        flex-direction: column;
+    }
+    
+    .room-options,
+    .amenities-options,
+    .age-options {
+        flex-direction: column;
+    }
+    
+    .search-actions {
+        flex-direction: column;
+    }
+    
+    .search-btn,
+    .reset-btn {
+        width: 100%;
+    }
+}
+
+/* منوی اصلی */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.post-ad-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.post-ad-btn i {
+    font-size: 1.2rem;
+}
+
+.post-ad-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-btn, .register-btn, .post-ad-btn {
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.register-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.post-ad-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+}
+
+.post-ad-btn i {
+    font-size: 1.2rem;
+}
+
+.login-btn:hover, .post-ad-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.register-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* حالت تاریک */
+.dark-theme .post-ad-btn {
+    background-color: var(--white);
+    color: var(--dark-bg);
+}
+
+.dark-theme .login-btn {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.dark-theme .register-btn {
+    background-color: var(--white);
+    color: var(--dark-bg);
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    .nav-buttons, .auth-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .post-ad-btn,
+    .login-btn,
+    .register-btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* انیمیشن‌ها */
+.post-ad-btn, .login-btn, .register-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.post-ad-btn::after,
+.login-btn::after,
+.register-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.post-ad-btn:active::after,
+.login-btn:active::after,
+.register-btn:active::after {
+    width: 200%;
+    height: 200%;
+}
+
+/* تغییر رنگ کارت‌های املاک */
+.property-card {
+    border: 1px solid var(--border-color);
+}
+
+.property-badges .badge {
+    background-color: var(--primary-color);
+}
+
+.price {
+    background: var(--primary-color);
+}
+
+/* تغییر رنگ سرویس‌ها */
+.service-card i {
+    color: var(--primary-color);
+}
+
+.service-card:hover {
+    border-color: var(--primary-color);
+}
+
+/* تغییر رنگ فوتر */
+footer {
+    background-color: var(--primary-color);
+}
+
+/* تغییر رنگ دکمه‌های عملیات */
+.action-btn {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.action-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.action-btn.favorite {
+    background-color: var(--primary-color);
+}
+
+/* تغییر رنگ فیلترها */
+.filter-btn {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* تغییر رنگ جستجو */
+.search-btn {
+    background-color: var(--primary-color);
+}
+
+.search-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* تغییر رنگ منو */
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.contact-btn {
+    background-color: var(--primary-color);
+}
+
+/* تغییر رنگ فرم */
+input:focus, 
+select:focus, 
+textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* حالت تاریک */
+.dark-theme .property-card,
+.dark-theme .service-card,
+.dark-theme .contact-info,
+.dark-theme .contact-form {
+    background-color: var(--dark-surface);
+    color: var(--white);
+}
+
+.dark-theme .action-btn {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.dark-theme .action-btn:hover {
+    background-color: var(--white);
+    color: var(--dark-bg);
+}
+
+/* پنل مدیریت - طراحی جدید */
+.admin-dashboard {
+    display: grid;
+    grid-template-columns: var(--admin-sidebar-width) 1fr;
+    min-height: 100vh;
+    background-color: var(--admin-bg);
+    position: relative;
+}
+
+/* منوی کناری جدید */
+.admin-sidebar {
+    background-color: var(--admin-surface);
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: var(--admin-sidebar-width);
+    z-index: var(--z-fixed);
+    border-left: 1px solid var(--admin-border);
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-logo {
+    height: var(--admin-header-height);
+    padding: 0 var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.admin-logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+}
+
+.admin-logo h1 {
+    color: var(--white);
+    font-size: var(--font-xl);
+    font-weight: var(--font-bold);
+}
+
+.admin-menu {
+    flex: 1;
+    padding: var(--spacing-md);
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.admin-menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.admin-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.admin-menu::-webkit-scrollbar-thumb {
+    background: var(--admin-border);
+    border-radius: var(--radius-full);
+}
+
+.admin-menu-item {
+    height: var(--admin-menu-item-height);
+    padding: 0 var(--spacing-lg);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--admin-transition);
+    margin-bottom: var(--spacing-xs);
+}
+
+.admin-menu-item i {
+    font-size: var(--font-xl);
+    width: 24px;
+    text-align: center;
+}
+
+.admin-menu-item:hover {
+    background-color: var(--admin-hover);
+}
+
+.admin-menu-item.active {
+    background-color: var(--admin-active);
+    color: var(--admin-primary);
+}
+
+/* محتوای اصلی - بهینه شده */
+.admin-main {
+    margin-right: var(--admin-sidebar-width);
+    padding: var(--spacing-lg);
+    min-height: 100vh;
+}
+
+.admin-header {
+    height: var(--admin-header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--spacing-lg);
+    background-color: var(--admin-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* کارت‌های آمار - بهینه شده */
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--admin-card-min-width), 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.stat-card {
+    background-color: var(--admin-surface);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--admin-border);
+    transition: var(--admin-transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* جدول داده‌ها - بهینه شده */
+.data-table-container {
+    background-color: var(--admin-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--admin-border);
+    overflow: hidden;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: var(--spacing-md) var(--spacing-lg);
+    text-align: right;
+}
+
+.admin-table th {
+    background-color: var(--admin-bg);
+    font-weight: var(--font-semibold);
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.admin-table td {
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.admin-table tbody tr:hover {
+    background-color: var(--admin-hover);
+}
+
+/* فرم‌ها - بهینه شده */
+.admin-form {
+    background-color: var(--admin-surface);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--admin-border);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-control {
+    width: 100%;
+    height: 45px;
+    padding: 0 var(--spacing-md);
+    border: 1px solid var(--admin-border);
+    border-radius: var(--radius-md);
+    background-color: var(--admin-surface);
+    color: var(--text-color);
+    transition: var(--admin-transition);
+}
+
+.form-control:focus {
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.1);
+}
+
+/* دکمه‌ها - بهینه شده */
+.admin-btn {
+    height: 45px;
+    padding: 0 var(--spacing-xl);
+    border-radius: var(--radius-md);
+    font-weight: var(--font-medium);
+    transition: var(--admin-transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    cursor: pointer;
+    border: none;
+    min-width: 120px;
+}
+
+.admin-btn-primary {
+    background-color: var(--admin-primary);
+    color: var(--white);
+}
+
+.admin-btn-primary:hover {
+    filter: brightness(1.1);
+}
+
+.admin-btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--admin-primary);
+    color: var(--admin-primary);
+}
+
+.admin-btn-secondary:hover {
+    background-color: var(--admin-hover);
+}
+
+/* ریسپانسیو - بهینه شده */
+@media (max-width: 1024px) {
+    .admin-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar {
+        transform: translateX(100%);
+        transition: transform var(--admin-transition);
+    }
+
+    .admin-sidebar.active {
+        transform: translateX(0);
+    }
+
+    .admin-main {
+        margin-right: 0;
+    }
+
+    .admin-header {
+        position: sticky;
+        top: 0;
+        z-index: calc(var(--z-fixed) - 1);
+    }
+
+    .toggle-sidebar {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .data-table-container {
+        overflow-x: auto;
+    }
+
+    .admin-table {
+        min-width: 600px;
+    }
+
+    .admin-form {
+        padding: var(--spacing-lg);
+    }
+
+    .admin-actions {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .admin-btn {
+        width: 100%;
+    }
+}
+
+/* انیمیشن‌ها - بهینه شده */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* دکمه همبرگر */
+.toggle-sidebar {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.toggle-sidebar:hover {
+    background-color: var(--admin-hover);
+}
+
+.toggle-sidebar span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 4px auto;
+    transition: var(--admin-transition);
+}
+
+.toggle-sidebar.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggle-sidebar.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-sidebar.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* محافظت از محتوای حساس */
+.secure-content {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* جلوگیری از دسترسی به محتوای حساس */
+.admin-protected {
+    content-visibility: hidden;
+    pointer-events: none;
+}
+
+/* محافظت از فرم‌های ورود */
+.admin-login-form input[type="password"] {
+    -webkit-text-security: disc;
+    text-security: disc;
+}
+
+/* جلوگیری از ذخیره خودکار */
+.secure-input {
+    autocomplete: off;
+    autocorrect: off;
+    autocapitalize: off;
+    spellcheck: false;
+}
+
+/* محافظت از کپی کردن */
+.no-copy {
+    user-select: none;
+    pointer-events: none;
+}
+
+/* مخفی کردن اطلاعات حساس */
+.sensitive-data {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
+
+.sensitive-data:hover {
+    filter: blur(0);
+}
+
+/* امنیت CSRF */
+.admin-form {
+    position: relative;
+}
+
+.admin-form::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* محافظت از توکن‌ها */
+[data-token] {
+    display: none !important;
+}
+
+/* امنیت XSS */
+.user-content {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* محافظت از اطلاعات حساس در حالت تاریک */
+.dark-theme .sensitive-data {
+    filter: blur(8px);
+}
+
+/* جلوگیری از نمایش اطلاعات حساس در اسکرین‌شات */
+@media print {
+    .secure-content,
+    .sensitive-data,
+    .admin-protected {
+        display: none !important;
+    }
+}
+
+/* محافظت از فرم‌ها در برابر حملات */
+.admin-form input,
+.admin-form textarea {
+    max-length: 100;
+    pattern: "[^<>]*";
+}
+
+/* امنیت در برابر Clickjacking */
+.admin-frame-protection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2147483647;
+    display: none;
+}
+
+/* نمایش هشدار امنیتی */
+.security-alert {
+    background-color: var(--error-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* محافظت از لاگ‌ها */
+.admin-logs {
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-height: 300px;
+    overflow-y: auto;
+}
